@@ -52,6 +52,38 @@ function wordimpress_help_links() {
 }
 
 
+//* setup detailed help page
+function wordimpress_help_menu() {
+
+	$page = add_dashboard_page( 'Help', 'Help', 'read', 'wordimpress_instructions', 'wordimpress_instruct_page');
+}
+
+add_action( 'admin_menu', 'wordimpress_help_menu' );
+
+function wordimpress_instruct_page() { ?>
+
+<div class="wrap">
+    <div id="icon-tools" class="icon32">
+    <br />
+</div>
+
+<h2>Help</h2>
+<hr />
+<p><em>For additional help and support, contact MyName at <a href="http://yoursite.com">MyCompany</a>. Call: 000.000.0000. Email: <a href="mailto:you@yourdomaint.com">You@YourDomain.com</a>.</em></p>
+<br />
+<br />
+
+<div id="wordimpress_instruction_page">
+
+	<h3>Video Tutorial</h3>
+	
+	<p>Watch this video to learn awesome WP stuff!</p>
+
+	<iframe width="853" height="480" src="#" frameborder="0" allowfullscreen></iframe>
+
+<?php }
+
+
 //* re-order admin panel
 function wordimpress_reorder_menu( $__return_true ) {
 	return array(
